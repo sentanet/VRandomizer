@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>VRandomizer</title>
+
+    <link rel="icon" href="ikona.ico">
+    <link rel="shortcut icon" href="assets\icon.ico" type="image/x-icon">
+
+</head>
+<body>
+
+    <header><img class="big" src="assets\mainbaner.png" alt="header" /></header>
+
+    <div class="bg1">
+        <div class="bg2">
+            <h4 class="h4" id="h4">Draw your next Agent</h4>
+
+            <form action="/" method="post">
+                <button type="button" class="button" id="button">Random</button>
+                <textarea text readonly class="outtext" id="nameField">Your Agent</textarea>
+                <img src="assets\characters\none.png" class="avatar" />
+
+            </form>
+        </div>
+    </div>
+
+    <div>
+
+        <input type="checkbox" id="ag1" checked><label class="checkbox" for="ag1">Astra</label>
+        <input type="checkbox" id="ag2" checked><label class="checkbox" for="ag2">Breach</label>
+        <input type="checkbox" id="ag3" checked><label class="checkbox" for="ag3">Brimstone</label>
+        <input type="checkbox" id="ag4" checked><label class="checkbox" for="ag4">Chamber</label>
+        <input type="checkbox" id="ag5" checked><label class="checkbox" for="ag5">Cypher</label>
+        <input type="checkbox" id="ag6" checked><label class="checkbox" for="ag6">Deadlock</label>
+        <input type="checkbox" id="ag7" checked><label class="checkbox" for="ag7">Fade</label>
+        <input type="checkbox" id="ag8" checked><label class="checkbox" for="ag8">Gekko</label>
+        <input type="checkbox" id="ag9" checked><label class="checkbox" for="ag9">Harbor</label>
+        <input type="checkbox" id="ag10" checked><label class="checkbox" for="ag10">Jett</label>
+        <input type="checkbox" id="ag11" checked><label class="checkbox" for="ag11">KAY/0</label>
+
+    </div>
+
+    <div>
+        <input type="checkbox" id="ag12" class="check" checked><label class="checkbox1" for="ag12">Killjoy</label>
+        <input type="checkbox" id="ag13" class="check" checked><label class="checkbox1" for="ag13">Neon</label>
+        <input type="checkbox" id="ag14" class="check" checked><label class="checkbox1" for="ag14">Omen</label>
+        <input type="checkbox" id="ag15" class="check" checked><label class="checkbox1" for="ag15">Phoenix</label>
+        <input type="checkbox" id="ag16" class="check" checked><label class="checkbox1" for="ag16">Raze</label>
+        <input type="checkbox" id="ag17" class="check" checked><label class="checkbox1" for="ag17">Reyna</label>
+        <input type="checkbox" id="ag18" class="check" checked><label class="checkbox1" for="ag18">Sage</label>
+        <input type="checkbox" id="ag19" class="check" checked><label class="checkbox1" for="ag19">Skye</label>
+        <input type="checkbox" id="ag20" class="check" checked><label class="checkbox1" for="ag20">Sova</label>
+        <input type="checkbox" id="ag21" class="check" checked><label class="checkbox1" for="ag21">Viper</label>
+        <input type="checkbox" id="ag22" class="check" checked><label class="checkbox1" for="ag22">Yoru</label>
+    </div>
+
+    <section>
+    </section>
+
+    <footer><img class="big" src="assets\footer.png" alt="footer" /></footer>
+
+    <script type="text/javascript">
+
+        const names = [
+            "Astra",
+            "Breach",
+            "Brimstone",
+            "Chamber",
+            "Cypher",
+            "Deadlock",
+            "Fade",
+            "Gekko",
+            "Harbor",
+            "Jett",
+            "KAY/0",
+            "Killjoy",
+            "Neon",
+            "Omen",
+            "Phoenix",
+            "Raze",
+            "Reyna",
+            "Sage",
+            "Skye",
+            "Sova",
+            "Viper",
+            "Yoru"];
+
+        const button = document.getElementById("button");
+        const nameField = document.getElementById("nameField");
+
+        button.addEventListener("click", function () {
+
+            const randomIndex = Math.floor(Math.random() * names.length);
+            const randomName = names[randomIndex];
+
+
+            nameField.value = randomName;
+        });
+
+    </script>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #080808;
+        }
+
+        .h4 {
+            color: white;
+            font-size: x-large;
+            font-family: Ebrima;
+            margin-top: auto;
+            margin: 0px 20%;
+            background-color: #300808;
+            text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F, 0 0 0.2em #87F
+        }
+
+        .bg1 {
+            height: 275px;
+            width: 93.25%;
+            border-radius: 10px;
+            float: none;
+            margin: 20px auto;
+            background-color: #791111;
+            box-sizing: border-box;
+        }
+
+        .bg2 {
+            height: 250px;
+            width: 50%;
+            border-radius: 30px;
+            margin: 0px auto;
+            padding: 20px 0px;
+            background-color: #300808;
+            box-sizing: border-box;
+        }
+
+        header img {
+            width: 100%;
+            display: block;
+            padding: 0px 35px;
+            border-radius: 10px;
+        }
+
+        .avatar {
+            width: 10%;
+            height: 10%;
+            float: right;
+            margin-top: -7.5%;
+            margin-right: 24%;
+            box-sizing: border-box;
+            display: block;
+            position: static;
+        }
+
+        .button {
+            width: 13%;
+            height: auto;
+            float: left;
+            margin-top: 16%;
+            margin-left: 8%;
+            border-radius: 4px;
+            text-align: center;
+            box-sizing: border-box;
+            background-color: red;
+            display: block;
+            color: #3a0000;
+            font-size: small;
+            font-weight: bolder;
+        }
+
+        .outtext {
+            margin-top: 15.5%;
+            margin-right: 38%;
+            border-radius: 4px;
+            text-align: center;
+            font-family: Ebrima;
+            font-size: medium;
+            resize: none;
+            width: 37%;
+            height: 25px;
+            float: right;
+            box-sizing: border-box;
+            display: block;
+            color: #FFFFFF;
+        }
+
+        .checkbox {
+            color: white;
+            margin-left: 10px;
+            margin-right: 17px;
+            font-weight: bolder;
+            margin-top: -30%;
+        }
+
+        .checkbox1 {
+            color: white;
+            margin-left: 10px;
+            font-weight: bolder;
+        }
+
+        .check {
+            margin-top: -30%;
+            margin-left: 18px;
+        }
+
+        .ag1 {
+            height: 40%;
+            width: 40%;
+        }
+
+        footer img {
+            margin-top: 90%;
+            padding: 5wpx;
+            height: 10%;
+            width: 100%;
+        }
+    </style>
+
+</body>
+
+</html>
